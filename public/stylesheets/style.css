@@ -102,3 +102,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #32abdb;
 }
+
+footer,
+footer > a {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 14px;
+}
