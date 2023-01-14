@@ -1,0 +1,24 @@
+<%- include('./partials/header') %>
+
+<h1>Your Booked Flights</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Airline:</th>
+            <th>Airport:</th>
+            <th>Flight Number:</th>
+            <th>Date of Departure:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% flights.forEach((flight) => { %>
+        <tr>
+            <td><%= flight.airline %></td>
+            <td><%= flight.airport %></td>
+            <td><%= flight.flightNo %></td>
+            <td><%= flight.departs %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+<%- include('./partials/footer') %>
