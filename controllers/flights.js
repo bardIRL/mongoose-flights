@@ -1,10 +1,16 @@
+const Flight = require("../models/flight");
+
 module.exports = {
   index,
+  new: newFlight,
 };
 
 function index(req, res) {
-  title: "Your Booked Flights",
-    flight.find({}, function (err, flights) {
-      res.render("flight/index", { movies });
-    });
+  Flight.find({}, function (err, flights) {
+    res.render("flights/index", { flights });
+  });
+}
+
+function newFlight(req, res) {
+  res.render("flights/new");
 }

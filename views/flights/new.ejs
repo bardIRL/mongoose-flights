@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<h1>Book A New Flight</h1>
+<form>
+    <label>Airline
+        <select name="airline">
+            <option value="American">American</option>
+            <option value="Southwest">Southwest</option>
+            <option value="United">United</option>
+            <option value="Delta">Delta</option>
+        </select>
+    </label><br>
+    <label>Airport
+        <select name="airport">
+            <option value="SFO">SFO</option>
+            <option value="SJC">SJC</option>
+            <option value="LAX">LAX</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="JFK">JFK</option>
+            <option value="CLT">CLT</option>
+        </select>
+    </label><br>
+    <label>Flight Number
+        <input type="number" name="flightNo">
+    </label><br>
+    <label>Departs
+        <input type="date" name="departs">
+    </label>
+    <label>Number of Seats
+        <input type="number" name="seats">
+    </label>
+    <button type="submit">Book Flight</button>
+</form>
+
+<%- include('../partials/footer') %>
