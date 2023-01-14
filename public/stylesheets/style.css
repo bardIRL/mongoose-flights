@@ -1,11 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Sofia Sans", Helvetica, Arial, sans-serif;
+}
+
+.ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
 }
 
 a {
   color: #00b7ff;
   text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #008ac0;
 }
 
 nav {
@@ -20,4 +37,68 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+/* flights/index.ejs */
+
+table {
+  width: 600px;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #64c0eb;
+  color: white;
+}
+
+/* flights/new.ejs */
+
+form {
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 9px;
+  padding: 30px;
+  width: 500px;
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  flex-direction: column;
+}
+
+select,
+input {
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+input[type="submit"] {
+  display: block;
+  background-color: #64c0eb;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #32abdb;
 }
