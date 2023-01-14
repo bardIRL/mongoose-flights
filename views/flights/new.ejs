@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <h1>Book A New Flight</h1>
-<form>
+<form action="/flights" method="POST">
     <label>Airline
         <select name="airline">
             <option value="American">American</option>
@@ -27,7 +27,12 @@
         <input type="date" name="departs">
     </label>
     <label>Number of Seats
-        <input type="number" name="seats">
+        <select name="seats">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option> 
+        </select>       
     </label>
     <button type="submit">Book Flight</button>
 </form>

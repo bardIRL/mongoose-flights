@@ -7,17 +7,19 @@
             <th>Airport:</th>
             <th>Flight Number:</th>
             <th>Date of Departure:</th>
+            <th>Seats:</th>
         </tr>
     </thead>
     <tbody>
-        <% flights.forEach((flight) => { %>
+        <% flights.forEach((f) => { %>
         <tr>
-            <td><%= flight.airline %></td>
-            <td><%= flight.airport %></td>
-            <td><%= flight.flightNo %></td>
-            <td><%= flight.departs %></td>
+            <td><%= f.airline %></td>
+            <td><%= f.airport %></td>
+            <td><%= f.flightNo %></td>
+            <td><%= f.departs %></td>
+            <td><%= f.seats %></td>
         </tr>
-        <% }); %>
+        <% }) %>
     </tbody>
 </table>
 <%- include('../partials/footer') %>
