@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 50px auto;
 }
 
 a {
@@ -39,10 +39,8 @@ header {
   gap: 20px;
 }
 
-/* flights/index.ejs */
-
 table {
-  width: 600px;
+  width: 400px;
   border-collapse: collapse;
 }
 
@@ -68,8 +66,6 @@ th {
   background-color: #64c0eb;
   color: white;
 }
-
-/* flights/new.ejs */
 
 form {
   border: 1px solid rgb(214, 214, 214);

@@ -1,25 +1,29 @@
 <%- include('../partials/header') %>
-<h1>Your Booked Flights</h1>
-<table>
+<div class="ctr">
+  <h1>Your Booked Flights</h1>
+  <table>
     <thead>
-        <tr>
-            <th>Airline</th>
-            <th>Airport</th>
-            <th>Flight No.</th>
-            <th>Date</th>
-            <th>Seats</th>
-        </tr>
+      <tr>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>Flight No.</th>
+        <th>Date</th>
+        <th>Seats</th>
+        <th>Details</th>
+      </tr>
     </thead>
     <tbody>
-        <% flights.forEach((f) => { %>
-        <tr>
-            <td><%= f.airline %></td>
-            <td><%= f.airport %></td>
-            <td><%= f.flightNo %></td>
-            <td><%= f.departs %></td>
-            <td><%= f.seats %></td>
-        </tr>
-        <% }) %>
+      <% flights.forEach((f) => { %>
+      <tr>
+        <td><%= f.airline %></td>
+        <td><%= f.airport %></td>
+        <td><%= f.flightNo %></td>
+        <td><%= f.departs.toLocaleString() %></td>
+        <td><%= f.seats %></td>
+        <td><a href="/flights/<%= f.id %>">Details</a></td>
+      </tr>
+      <% }) %>
     </tbody>
-</table>
+  </table>
+</div>
 <%- include('../partials/footer') %>

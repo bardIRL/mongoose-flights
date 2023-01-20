@@ -1,0 +1,65 @@
+<%- include('../partials/header') %>
+<div class="ctr">
+  <h1>Flight Details</h1>
+  <table>
+    <tr>
+      <th>Airline</th>
+      <td><%= flight.airline %></td>
+    </tr>
+    <tr>
+      <th>Airport</th>
+      <td><%= flight.airport %></td>
+    </tr>
+    <tr>
+      <th>Flight No.</th>
+      <td><%= flight.flightNo %></td>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <td><%= flight.departs.toLocaleString() %></td>
+    </tr>
+  </table>
+  <br />
+  <h2>Destinations</h2>
+  <table>
+    <tr>
+      <th>Destination Airport</th>
+      <th>Destination Arrival</th>
+    </tr>
+    <% flight.destinations.forEach(function(f) { %>
+    <tr>
+      <td><%= f.airport ? f.airport : 'None' %></td>
+      <td><%= f.arrival ? f.arrival.toLocaleString() : 'None' %></td>
+    </tr>
+    <% }); %>
+  </table>
+
+  <br /><br />
+  <h2>Add Destination</h2>
+  <form method="POST" action="/flights/<%= flight._id %>/destinations">
+    <label>Airport:</label>
+    <input type="string" name="airport" />
+    <label>Arrival:</label>
+    <input type="datetime-local" name="arrival" />
+    <input type="submit" value="Add Destination" />
+  </form>
+
+  <br /><br />
+  <h2>Tickets</h2>
+  <a href="/flights/<%= flight._id %>/tickets/new">
+    <button>New Ticket</button></a
+  ><br />
+  <table>
+    <tr>
+      <th>Seat</th>
+      <th>Price</th>
+    </tr>
+    <% tickets.forEach(function(t) { %>
+    <tr>
+      <td><%= t.seat %></td>
+      <td><%= t.price %></td>
+    </tr>
+    <% }) %>
+  </table>
+</div>
+<%- include('../partials/footer') %>

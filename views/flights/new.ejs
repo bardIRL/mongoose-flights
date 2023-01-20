@@ -1,40 +1,37 @@
 <%- include('../partials/header') %>
-<h1>Book A New Flight</h1>
-<form action="/flights" method="POST">
-    <label>Airline
-        <select name="airline">
-            <option value="American">American</option>
-            <option value="Southwest">Southwest</option>
-            <option value="United">United</option>
-            <option value="Delta">Delta</option>
-        </select>
-    </label><br>
-    <label>Airport
-        <select name="airport">
-            <option value="SFO">SFO</option>
-            <option value="SJC">SJC</option>
-            <option value="LAX">LAX</option>
-            <option value="DFW">DFW</option>
-            <option value="DEN">DEN</option>
-            <option value="JFK">JFK</option>
-            <option value="CLT">CLT</option>
-        </select>
-    </label><br>
-    <label>Flight Number
-        <input type="number" name="flightNo">
-    </label><br>
-    <label>Date
-        <input type="datetime-local" name="departs">
-    </label><br>
-    <label>Number of Seats
-        <select name="seats">
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option> 
-        </select>       
-    </label>
-    <input type="submit" value="Submit">
-</form>
-
+<div class="ctr">
+  <h1>Book A New Flight</h1>
+  <form action="/flights" method="POST">
+    <label
+      >Airline
+      <select name="airline">
+        <option value="American">American</option>
+        <option value="Southwest">Southwest</option>
+        <option value="United">United</option>
+        <option value="Delta">Delta</option>
+      </select> </label
+    ><br />
+    <label
+      >Airport
+      <select name="airport">
+        <option value="SFO">SFO</option>
+        <option value="SJC">SJC</option>
+        <option value="LAX">LAX</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="JFK">JFK</option>
+        <option value="CLT">CLT</option>
+      </select> </label
+    ><br />
+    <label
+      >Flight Number
+      <input type="number" name="flightNo" /> </label
+    ><br />
+    <label
+      >Date
+      <input type="datetime-local" name="departs" /> </label
+    ><br />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
 <%- include('../partials/footer') %>
